@@ -726,12 +726,115 @@ button {
   text-align: center;
 }
 
-body {
-  font-family: "Rubik", sans-serif;
+.product-item {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 35px;
+}
+.product-item .product-img {
+  width: 276px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.product-item .product-img a {
+  display: block;
+  width: 100%;
+}
+.product-item .product-img img {
+  width: 100%;
+}
+.product-item .product-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(240, 236, 236, 0.129);
+  opacity: 0;
+  z-index: 0;
+  transition: 0.5s;
+}
+.product-item:hover .product-img::after {
+  opacity: 5;
+}
+.product-item:hover .product-content {
+  transform: translateY(-96px);
+}
+.product-item .product-content {
+  border-top: 1px solid rgba(203, 203, 203, 0.1882352941);
+  width: 100%;
+  padding: 20px 14px 0px 10px;
+  text-align: center;
+  transform: translateY(-30px);
+  transition: 0.5s;
+  background-color: #fff;
+}
+.product-item .product-content .product-name {
+  margin-bottom: 7px;
+  color: #303030;
+  font-size: 19px;
+  display: inline-block;
+}
+.product-item .product-content .product-name:hover {
+  color: #abd373;
+}
+.product-item .product-content .price-box .new-price {
+  color: #abd373;
+  font-size: 21px;
+}
+.product-item .product-content .rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-item .product-content .rating-box > ul {
+  display: flex;
+}
+.product-item .product-content .rating-box > ul > li {
+  padding-right: 10px;
+}
+.product-item .product-content .rating-box > ul > li > i {
+  color: #ffe24d;
+  font-size: 14px;
+  padding-bottom: 11px;
+}
+.product-item .product-content .social-media {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-item .product-content .social-media a {
+  text-decoration: none;
+  color: #abd373;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: rgba(233, 233, 233, 0.431372549);
+  display: inline-block;
+  line-height: 40px;
+  margin-right: 8px;
+  transition: 0.4s;
+}
+.product-item .product-content .social-media a:hover {
+  color: #ffffff;
+  background-color: #abd373;
+  border: 1px solid #abd373;
+}
+.product-item .product-content .social-media a i {
+  font-size: 16px;
 }
 
-.container {
-  width: 1200px;
+body {
+  font-family: "Rubik", sans-serif;
 }
 
 /* ---Slider Area */

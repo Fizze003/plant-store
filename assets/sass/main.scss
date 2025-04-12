@@ -4,14 +4,11 @@
  @use './layout/header' as *;
  @use './layout/footer.scss' as *;
  @use './utils/mixin.scss' as *;
- @use './components/produts.scss';
+ @use './components/produts' as *;
  
 
  body{
    font-family: $rubik-font;
- }
- .container {
-   width: $container-size;
  }
 
 
