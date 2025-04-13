@@ -299,3 +299,72 @@
         max-width: 580px;
     }
 }
+
+
+/* ---Image hover effect--- */
+.img {
+    &-zoom-effect {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: block;
+        
+        img {
+            transition: all 0.8s ease-in-out;
+            transform: scale(1);
+            width: 100%; // Ensure image fills container
+            display: block; // Remove any default spacing
+        }
+        
+        &:hover {
+            img {
+                z-index: 1; // Lower than content
+                transform: scale(1.06) rotate(1deg);
+            }
+        }
+    }
+    
+    &-hover-effect {
+        position: relative;
+        z-index: 2; // Higher than zoom effect
+        
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            pointer-events: none;
+            z-index: 3; // Above image but below content
+        }
+        
+        &:before {
+            bottom: 0;
+            left: 50%;
+            right: 51%;
+            top: 0;
+        }
+        
+        &:after {
+            bottom: 50%;
+            left: 0;
+            right: 0;
+            top: 50%;
+        }
+        
+        &:hover {
+            &:before {
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: all 900ms ease-in;
+            }
+            
+            &:after {
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+                transition: all 900ms ease-in;
+            }
+        }
+    }
+}
