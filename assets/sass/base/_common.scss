@@ -292,6 +292,7 @@
         }
     }
     &-desc {
+        margin-top: 30px;
         text-align: center;
         line-height: 31px;
         color: black;
@@ -364,6 +365,50 @@
                 bottom: 0;
                 opacity: 0;
                 transition: all 900ms ease-in;
+            }
+        }
+    }
+}
+
+
+/* ---Pagination--- */
+.pagination {
+    &-area {
+        padding-top: 50px;
+    }
+    .page {
+        &-item {
+            &:not(:last-child) {
+                padding-right: 10px;
+            }
+            &.active {
+                .page {
+                    &-link {
+                        background-color: transparent;
+                        border-color: $primary-color;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        &-link {
+            border: 1px solid $border-color;
+            color: #d5d5d5;
+            text-align: center;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            &:focus {
+                box-shadow: none;
+            }
+            span {
+                font-size: 12px;
+            }
+            &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: $white;
             }
         }
     }

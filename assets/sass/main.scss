@@ -6,6 +6,11 @@
  @use './utils/mixin.scss' as *;
  @use './components/produts' as *;
  @use './components/button.scss' as *;
+ @use './components/breadcrumb' as *;
+ @use './pages/about' as *;
+ @use './pages/blog' as *;
+ @use './pages/contact' as *;
+ @use './pages/login&register' as *;
  
 
  body{
@@ -205,7 +210,7 @@
   }
 }
 
-/* ---Shipping Area--*/
+/* --- Shipping Area--*/
 .shipping {
   &-item {
       border: 1px dashed $primary-color;;
@@ -265,8 +270,7 @@
   }
 }
 
-
-/* ---Banner area --- */
+/* --- Banner area --- */
 .banner {
   &-item {
       position: relative;
@@ -329,7 +333,7 @@
       &.text-position-left {
           width: calc(100% - 70px);
           top: 50px;
-          left: 70px;
+          left: 36px;
           
           @include breakpoint(max-sm-device) {
               top: 25px;
@@ -425,7 +429,19 @@
             .popup-btn {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 height: 100%;
+
+                a {
+                  color: $primary-color;
+                  background: $white;
+                  width:87px;
+                  height: 90px;
+                  line-height: 94px;
+                  border-radius: 50%;
+                  text-align: center;
+                  font-size: 36px;
+                }
             }
         }
     }
@@ -455,6 +471,8 @@
             line-height: 57px;
             text-align: center;
             margin-bottom: 70px;
+            color: $text-gray;
+            font-weight: 500;
             @include breakpoint(max-xs-device) {
                 font-size: 28px;
                 line-height: 1.6;
@@ -478,6 +496,7 @@
                     * {
                         color: $primary-color;
                         font-size: 40px;
+                        font-weight: 500;
                     }
                     .prefix {
                         line-height: 1;
@@ -546,4 +565,217 @@
 }
 }
 
+/* --- Testimonial area --- */
+.testimonial {
+  &-area {
+    .container-fluid {
+      @include breakpoint(min-sm-device) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    .custom-space {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      position: relative; 
+      justify-content: center;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      @include breakpoint(max-xxs-device) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  &-bg {
+    min-height: 440px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: relative; 
+    z-index: 1; 
+    padding-top: 100px !important;
+    
+    @include breakpoint(max-xxs-device) {
+      padding-top: 75px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &-item {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 360px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;     
+    &:hover {
+      &:before {
+        background-color: $text-light-gray;
+      }
+    }
+
+    &:before {
+      content: url(../img/testimonial/icon/quotation.png);
+      border-bottom-left-radius: 100%;
+      background-color: $primary-color;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 125px;
+      height: 110px;
+      line-height: 110px;
+      text-align: center;
+      padding-left: 15px;
+      transition: $baseTransition;
+    }
+
+    .user {
+      &-name {
+        text-transform: uppercase;
+        color: #434343;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 25px;
+      }
+
+      &-occupation {
+        color: #434343;
+      }
+
+      &-comment {
+        color: #434343;
+        font-style: italic;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+/* --- Brand area --- */
+.brand {
+  &-bg{
+    border-radius: 10px;
+    padding: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &-item {
+    opacity: 0.5;
+    transition: 0.4s;
+
+    &:hover {
+      opacity:1;
+
+    }
+
+  }
+
+}
+
+/* --- Blog area --- */
+.blog {
+  &-item {
+    background-color: #f6f7fb;
+    padding: 35px 30px 40px 30px;
+    margin: 0 15px;
+    border-radius: 10px;
+  }
+  &-content {
+    .blog-meta {
+      margin-bottom: 20px;
+
+      * {
+        color: $primary-color;
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          text-transform: uppercase;
+
+          &:not(:last-child) {
+            padding-right: 10px;
+          }
+
+          i {
+            vertical-align: text-bottom;
+            margin-right: 5px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 15px;
+
+      @include breakpoint (max-lg-device) {
+        font-size: 21px;
+      }
+
+      a{
+        transition: 0.4s;
+        color: $secondary-color;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .short-desc{
+      line-height: 30px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &-img {
+    .img-full {
+      height: 100%;
+    }
+
+    .inner-btn {
+      i {
+        border: 2px solid $primary-color;
+        background-color: #f6f7fb;
+        color: $primary-color;
+        border-radius: 100%;
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      &-wrap {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+  }
+}
 

@@ -183,9 +183,13 @@
                 align-items: center;
                 
                 i {
-                    font-size: 21px; 
+                    font-size: 19px; 
                     color: $text-light-gray;
                     transition: color 0.3s ease;
+
+                    a {
+                        font-size: 16px;
+                    }
 
                     &:hover {
                         color: $primary-color; 

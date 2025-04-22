@@ -37,3 +37,30 @@ window.addEventListener('scroll', function () {
         stickyHeader.classList.remove('sticky');
     }
 });
+
+
+
+
+// Banner saygac 
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".count");
+
+    counters.forEach((counter) => {
+      counter.innerText = "0"; // Başlanğıcda sıfır göstər
+
+      const updateCounter = () => {
+        const target = +counter.innerText; // Mövcud dəyər
+        const endValue = +counter.getAttribute("data-target"); // Məqsəd dəyəri
+        const speed = 120; // sürət nə qədər balaca olsa, bir o qədər sürətli
+
+        if (target < endValue) {
+          counter.innerText = Math.ceil(target + (endValue - target) / 10);
+          setTimeout(updateCounter, speed);
+        } else {
+          counter.innerText = endValue;
+        }
+      };
+
+      updateCounter();
+    });
+  });

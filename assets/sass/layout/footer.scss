@@ -50,6 +50,7 @@
           
                     a {
                         transition: color 0.3s ease;
+                        color: $black;
 
                         &:hover {
                             color: $primary-color;
@@ -109,9 +110,6 @@
 
 }
 
-
-
-
 .social-link {
     display: flex;
     .title {
@@ -137,14 +135,20 @@
                 
                 a {
                     border: 1px solid $primary-color;
-                    color: $white;
-                    background: $primary-color;
+                    color: $primary-color;
+                    background: transparent;
                     border-radius: 100%;
                     width: 40px;
                     height: 40px;
                     line-height: 40px;
                     text-align: center; 
+
+                    &:hover {
+                        color: $white;
+                        background: $primary-color;
+                    }
                 }
+
             }
         }
     }

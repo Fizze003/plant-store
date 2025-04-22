@@ -1,0 +1,61 @@
+@use '..//abstracts/variables' as*;
+.breadcrumb {
+    &-height {
+        height: 370px;
+    }
+    &-heading {
+        text-transform: uppercase;
+        font-size: 36px;
+        text-align: center; 
+        font-weight: 500;
+        color: $text-gray;
+    }
+    &-item {
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        // Breadcrumb-ul-u ortalamaq üçün
+        ul {
+            display: flex;              // Flex yapısı
+            justify-content: center;    // Ortada yerləşdirir
+            align-items: center;        // Yuxarı-aşağı ortalayır
+            padding: 0;
+            margin: 0;
+            
+            li {
+                // display: inline-block;
+                line-height: 30px;
+                font-size: 14px;
+                margin-right: 5px;      // Li arasına boşluq
+
+                &:last-child {
+                    margin-right: 0;      // Sonuncu elementin marginini sıfırlayırıq
+                }
+
+                a {
+                    position: relative;
+                    padding-right: 25px;
+                    margin-right: 10px;
+                    
+                    display: inline-flex;   // Link-i ortalamaq
+                    justify-content: center;
+                    align-items: center;
+                    
+                    &:before {
+                        background-color: $primary-color;
+                        position: absolute;
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
