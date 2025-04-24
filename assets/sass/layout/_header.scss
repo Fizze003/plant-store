@@ -1,7 +1,5 @@
 @use '../abstracts/variables' as * ;
 
-
-
 /* ---Header top --- */
 .header {
     &-top{
@@ -297,6 +295,7 @@
         }
     }
 }
+
 /* Animasiya Tərifi */
 @keyframes fadeInDown {
     0% {

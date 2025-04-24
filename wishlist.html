@@ -4,26 +4,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pronia - Register</title>
+  <title>Pronia - Wishlist</title>
 
-   <!-- Favicon link -->
-   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <!-- Favicon link -->
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
 
-   <!-- Bootstrap link -->
-   <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
- 
-   <!-- Css link -->
-   <link rel="stylesheet" href="./assets/css/style.css" />
- 
-   <!-- Fontawesome link -->
-   <script src="https://kit.fontawesome.com/57c3f946da.js" crossorigin="anonymous"></script>
- 
-   <!-- Google Font -->
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-     rel="stylesheet" />
- 
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+
+  <!-- Css link -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Fontawesome link -->
+  <script src="https://kit.fontawesome.com/57c3f946da.js" crossorigin="anonymous"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+
 </head>
 
 <body>
@@ -91,6 +91,7 @@
                         <i class="fa-solid fa-user fs-4"></i>
                       </button>
                       <ul class="dropdown-menu">
+                      
                         <li>
                           <a href="./login.html" class="dropdown-item" href="#"
                             >Login</a
@@ -215,57 +216,103 @@
         <div class="container h-100">
           <div class="col-lg-12">
             <div class="breadcrumb-item">
-              <h2 class="breadcrumb-heading">Register</h2>
+              <h2 class="breadcrumb-heading">Wishlist Page</h2>
               <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li>Register</li>
+                <li>Wishlist Page</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!-- Login area -->
-       <div class="login-area section-space-top-100 section-space-bottom-100 d-flex align-items-center  justify-content-center">
-        <div class="container">
-          <div class="row">
+ 
+      <!-- Basket Area -->
+      <div class="h-100 h-custom section-space-bottom-100 section-space-top-100">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-12">
-              <form action="#">
-                <div class="login-form">
-                  <h2 class="login-title">Register</h2>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <label for="">First Name</label>
-                      <input type="text" placeholder="First Name">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Last Name</label>
-                      <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="col-lg-12">
-                      <label for="">Email Address*</label>
-                      <input type="email" placeholder="Email Address">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Password</label>
-                      <input type="password" placeholder="Password">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Confirm Password</label>
-                      <input type="password" placeholder="Password">
-                    </div>
-                   
-                    <div class="col-lg-12 pt-5">
-                      <button class="btn btn-custom-size lg-size btn-pronia-primary">Register</button>
-                    </div>
+
+              <div class="cart-wrap">
+                <div class="container">
+                      <div class="row">
+                      <div class="col-md-12">
+                          <div class="main-heading mb-10">My wishlist</div>
+                          <div class="table-wishlist">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                              <thead>
+                                <tr>
+                                  <th width="45%">Product Name</th>
+                                  <th width="15%">Unit Price</th>
+                                  <th width="15%">Stock Status</th>
+                                  <th width="15%"></th>
+                                  <th width="10%"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td width="45%">
+                                    <div class="display-flex align-center">
+                                                    <div class="img-product">
+                                                        <img src="./assets/img/product/1-1-270x300.jpg" alt="" class="mCS_img_loaded">
+                                                    </div>
+                                                    <div class="name-product">
+                                                        Apple iPad Mini
+                                                    </div>
+                                                  </div>
+                                              </td>
+                                  <td width="15%" class="price">$110.00</td>
+                                  <td width="15%"><span class="in-stock-box">In Stock</span></td>
+                                  <td width="15%"><button class="btn btn-pronia-primary xl-size btn-custom-sizee">Add to Cart</button></td>
+                                  <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td width="45%">
+                                    <div class="display-flex align-center">
+                                                    <div class="img-product">
+                                                        <img src="./assets/img/product/1-11-270x300.jpg" alt="" class="mCS_img_loaded">
+                                                    </div>
+                                                    <div class="name-product">
+                                                        Apple iPad Mini
+                                                    </div>
+                                                  </div>
+                                              </td>
+                                  <td width="15%" class="price">$110.00</td>
+                                  <td width="15%"><span class="in-stock-box">In Stock</span></td>
+                                  <td width="15%"><button class="btn btn-pronia-primary xl-size btn-custom-sizee">Add to Cart</button></td>
+                                  <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td width="45%">
+                                    <div class="display-flex align-center">
+                                                    <div class="img-product">
+                                                        <img src="./assets/img/product/1-4-270x300.jpg" alt="" class="mCS_img_loaded">
+                                                    </div>
+                                                    <div class="name-product">
+                                                        Apple iPad Mini
+                                                    </div>
+                                                  </div>
+                                              </td>
+                                  <td width="15%" class="price">$110.00</td>
+                                  <td width="15%"><span class="in-stock-box">In Stock</span></td>
+                                  <td width="15%"><button class="btn btn-pronia-primary xl-size btn-custom-sizee">Add to Cart</button></td>
+                                  <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+                                </tr>
+                              
+                             
+                              </tbody>
+                            </table>
+                        </div>
+                      </div>
                   </div>
                 </div>
-              </form>
+              </div>
+              
+
             </div>
           </div>
         </div>
-       </div>
+      </div>
 
     </div>
     <!-- Main Content Area End -->
@@ -405,9 +452,9 @@
         </div>
       </div>
     </div>
-
   </div>
 
+  
   <!-- Bootstrap link -->
   <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3-dist/js/bootstrap.min.js" />
 

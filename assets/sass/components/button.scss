@@ -15,12 +15,36 @@
     transition: all 0.3s ease;
     border: 1px solid transparent;
   }
+  
+.btn-custom-sizee {
+  padding: 0;
+  width: 133px;
+  height: 47px;
+  line-height: 47px;
+  font-size: 13px;
+  text-transform: capitalize;
+  overflow: hidden;
+  border-radius: 34px;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  }
 
 .btn-custom-size.xl-size {
     width: 210px;
     height: 65px;
     line-height: 65px;
     font-size: 16px;
+}
+
+.btn-custom-size.xxl-size {
+    width: 410px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 16px;
+    // padding: 20px 25px;
 }
 
 .btn-pronia-primary {

@@ -1,11 +1,10 @@
     @use '../abstracts/variables' as *;
     @use '../utils/mixin.scss' as *;
 
-
-    /*----------------------------------------*/
-    /*  23. Login Register
-    /*----------------------------------------*/
+    /* -- Login Register -- */
+    
     .login {
+        display: flex;
 
         
         &-form {
@@ -17,6 +16,7 @@
                 font-size: 14px;
                 margin-bottom: 12px;
                 font-weight: 500;
+                color: $text-gray;
                 text-transform: capitalize;
             }
             input {

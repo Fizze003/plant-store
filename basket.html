@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pronia - Register</title>
+  <title>Pronia - Basket</title>
 
    <!-- Favicon link -->
    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
@@ -215,10 +215,10 @@
         <div class="container h-100">
           <div class="col-lg-12">
             <div class="breadcrumb-item">
-              <h2 class="breadcrumb-heading">Register</h2>
+              <h2 class="breadcrumb-heading">Basket</h2>
               <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li>Register</li>
+                <li>Basket</li>
               </ul>
             </div>
           </div>
@@ -226,46 +226,154 @@
       </div>
 
 
-      <!-- Login area -->
-       <div class="login-area section-space-top-100 section-space-bottom-100 d-flex align-items-center  justify-content-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <form action="#">
-                <div class="login-form">
-                  <h2 class="login-title">Register</h2>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <label for="">First Name</label>
-                      <input type="text" placeholder="First Name">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Last Name</label>
-                      <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="col-lg-12">
-                      <label for="">Email Address*</label>
-                      <input type="email" placeholder="Email Address">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Password</label>
-                      <input type="password" placeholder="Password">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Confirm Password</label>
-                      <input type="password" placeholder="Password">
-                    </div>
-                   
-                    <div class="col-lg-12 pt-5">
-                      <button class="btn btn-custom-size lg-size btn-pronia-primary">Register</button>
+      <!-- Basket Area  -->
+      <div class="h-100 h-custom section-space-bottom-100 section-space-top-100">
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+      
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h5">Shopping Bag</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="./assets/img/product/1-10-270x300.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Thinking, Fast and Slow</p>
+                            <p class="mb-0">Daniel Kahneman</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus" style="color: #abd373"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="2" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus" style="color: #abd373"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="./assets/img/product/1-7-270x300.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Thinking, Fast and Slow</p>
+                            <p class="mb-0">Daniel Kahneman</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus" style="color: #abd373"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="2" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus" style="color: #abd373"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="./assets/img/product/1-3-270x300.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Thinking, Fast and Slow</p>
+                            <p class="mb-0">Daniel Kahneman</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus" style="color: #abd373"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="2" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus" style="color: #abd373"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                      </td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+      
+              <div class="card shadow-2-strong mb-5 lg-6" style="border-radius: 16px;">
+                <div class="card-body p-4">
+      
+                  <div class="row justify-content-center ">
+                    <div class="col-lg-6 col-xl-3">
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-2">Subtotal</p>
+                        <p class="mb-2">$23.49</p>
+                      </div>
+      
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-0">Shipping</p>
+                        <p class="mb-0">$2.99</p>
+                      </div>
+      
+                      <hr class="my-4">
+      
+                      <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                        <p class="mb-2">Total (tax included)</p>
+                        <p class="mb-2">$26.48</p>
+                      </div>
+                      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-custom-size xxl-size btn-pronia-primary">
+                        Checkout  <span>$26.48</span>
+                      </button>
                     </div>
                   </div>
+      
                 </div>
-              </form>
+              </div>
+      
             </div>
           </div>
         </div>
-       </div>
+      </div>
 
     </div>
     <!-- Main Content Area End -->

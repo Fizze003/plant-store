@@ -1,16 +1,26 @@
+ /* - Base - */
  @use './base/reset';
  @use './base/common' as *;
  @use './abstracts/variables' as *;
+ @use './utils/mixin.scss' as *;
+
+ /* - Layout - */
  @use './layout/header' as *;
  @use './layout/footer.scss' as *;
- @use './utils/mixin.scss' as *;
+
+ /* - Components - */
  @use './components/produts' as *;
  @use './components/button.scss' as *;
  @use './components/breadcrumb' as *;
- @use './pages/about' as *;
+
+/* - Pages - */
  @use './pages/blog' as *;
  @use './pages/contact' as *;
  @use './pages/login&register' as *;
+ @use './pages/whishlist' as *;
+ @use './pages/productdetails'as *;
+ @use './pages/about' as *;
+
  
 
  body{
@@ -18,7 +28,7 @@
  }
 
 
- /* ---Slider Area */
+ /* --- Slider area --- */
  .slider-area {
   position: relative;
   background-size: cover;
@@ -62,7 +72,7 @@
       top: 50%;
       transform: translateY(-50%);
       opacity: 1;
-      margin: 0 -80px; // Position outside the container
+      margin: 0 -80px;
       
       @include breakpoint(max-lg-device) {
         margin: 0 -50px;
@@ -210,7 +220,8 @@
   }
 }
 
-/* --- Shipping Area--*/
+
+/* --- Shipping area ---*/
 .shipping {
   &-item {
       border: 1px dashed $primary-color;;
@@ -270,20 +281,21 @@
   }
 }
 
+
 /* --- Banner area --- */
 .banner {
   &-item {
       position: relative;
       &:hover {
           .img-zoom-effect img {
-              transform: scale(1.06) rotate(1deg); // Trigger from parent
+              transform: scale(1.06) rotate(1deg);
           }
       }
   }
   
   &-img {
       position: relative;
-      z-index: 1; // Below content
+      z-index: 1; 
       
       img {
           width: 100%;
@@ -304,11 +316,11 @@
   &-content {
       position: absolute;
       width: 100%;
-      z-index: 2; // Above image
-      pointer-events: none; // Allows hover through to image
+      z-index: 2; 
+      pointer-events: none; 
       
       * {
-          pointer-events: auto; // But keeps content clickable
+          pointer-events: auto;
       }
       
       .collection {
@@ -565,105 +577,102 @@
 }
 }
 
+
 /* --- Testimonial area --- */
 .testimonial {
   &-area {
-    .container-fluid {
-      @include breakpoint(min-sm-device) {
-        padding-left: 30px;
-        padding-right: 30px;
+      .container-fluid {
+          @include breakpoint(min-sm-device) {
+              padding-left: 30px;
+              padding-right: 30px;
+          }
       }
-    }
-
-    .custom-space {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      position: relative; 
-      justify-content: center;
-      width: 100%;
+      .custom-space {
+          padding-left: 30px;
+          padding-right: 30px;
+          @include breakpoint(max-xxs-device) {
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+      }
+  }
+  &-bg {
+      padding-top: 100px;
+      min-height: 440px;
       padding-left: 30px;
       padding-right: 30px;
-
+      background-position: center 0;
+      background-repeat: no-repeat;
       @include breakpoint(max-xxs-device) {
-        padding-left: 15px;
-        padding-right: 15px;
+          padding-top: 75px;
+          padding-left: 15px;
+          padding-right: 15px;
       }
-    }
   }
-
-  &-bg {
-    min-height: 440px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    position: relative; 
-    z-index: 1; 
-    padding-top: 100px !important;
-    
-    @include breakpoint(max-xxs-device) {
-      padding-top: 75px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+  &-slider {
+      margin: -10px;
+      padding: 10px;
+      &.with-bg {
+          margin-top: -180px;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-right: -10px;
+          margin-left: -10px;
+          @include breakpoint(max-xs-device) {
+              margin-top: -150px;
+          }
+          @include breakpoint(max-xxs-device) {
+              margin-top: -85px;
+          }
+      }
   }
-
   &-item {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    background-color: $white;
-    border-radius: 10px;
-    padding: 40px;
-    width: 360px;
-    margin-right: 30px;
-    margin-bottom: 40px;
-    position: relative;
-    overflow: hidden;
-    z-index: 3;     
-    &:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      background-color: $white;
+      border-radius: 10px;
+      padding: 40px;
+      position: relative;
+      margin-right: 30px;
+      overflow: hidden;
+      &:hover {
+          &:before {
+              background-color: $text-gray;
+          }
+      }
       &:before {
-        background-color: $text-light-gray;
+          content: url(/assets/img/testimonial/icon/quotation.png);
+          border-bottom-left-radius: 100%;
+          background-color: $primary-color;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 125px;
+          height: 110px;
+          line-height: 110px;
+          text-align: center;
+          padding-left: 15px;
+          transition: $baseTransition;
       }
-    }
-
-    &:before {
-      content: url(../img/testimonial/icon/quotation.png);
-      border-bottom-left-radius: 100%;
-      background-color: $primary-color;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 125px;
-      height: 110px;
-      line-height: 110px;
-      text-align: center;
-      padding-left: 15px;
-      transition: $baseTransition;
-    }
-
-    .user {
-      &-name {
-        text-transform: uppercase;
-        color: #434343;
-        font-size: 16px;
-        font-weight: 400;
-        padding-top: 25px;
+      .user {
+          &-name {
+              text-transform: uppercase;
+              color: #434343;
+              font-size: 16px;
+              font-weight: 400;
+              padding-top: 25px;
+          }
+          &-occupation {
+              color: #434343;
+          }
+          &-comment {
+              color: #434343;
+              font-style: italic;
+              line-height: 32px;
+          }
       }
-
-      &-occupation {
-        color: #434343;
-      }
-
-      &-comment {
-        color: #434343;
-        font-style: italic;
-        line-height: 32px;
-        margin-bottom: 16px;
-      }
-    }
   }
 }
+
 
 /* --- Brand area --- */
 .brand {
@@ -693,6 +702,7 @@
   }
 
 }
+
 
 /* --- Blog area --- */
 .blog {

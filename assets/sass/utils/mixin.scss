@@ -11,11 +11,6 @@
             @content;
         }
     }
-    @if $point == max-md-device {
-        @media (max-width: 991px) {
-            @content;
-        }
-    }
     @if $point == max-sm-device {
         @media (max-width: 767px) {
             @content;
